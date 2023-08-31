@@ -21,7 +21,7 @@ const verifyToken = (requiredRole) => (req, res, next) => {
     req.userId = decoded.userId; 
     if (decoded.role !== requiredRole) {
       return res.status(403).json({
-        message: 'You do not have the authorization and permissions to access this resource.'
+        message: 'You do not have the authorization'
       });
     }
 
