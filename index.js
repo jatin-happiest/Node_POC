@@ -15,8 +15,10 @@ mongoose.connect('mongodb://127.0.0.1:27017/myapp').then(() => {
 
 const user = require('./routes/user-routes.js');
 const menuData = require('./menu.js');
+const imageUpload = require('./image-upload.js');
 
 app.use('/user', user);
 app.use('', menuData);
+app.use('', imageUpload);
 
 app.listen(3000);
